@@ -1,17 +1,17 @@
 {
   "requirements": [
     {
-      "identifier": "test_validar_importar_noticias_com_sucesso",
+      "identifier": "test_validar_importar_importar_noticias_com_sucesso",
       "description": "Executar o método `txt_importer` deve retornar uma estrutura contendo as linhas do arquivo",
       "bonus": false
     },
     {
-      "identifier": "",
+      "identifier": "test_validar_importar_com_extencao_invalida",
       "description": "Executar a função `txt_importer` com um arquivo TXT que não exista, deve ser exibida a mensagem: `Arquivo {path_file} não encontrado`",
       "bonus": false
     },
     {
-      "identifier": "",
+      "identifier": "test_validar_importar_com_arquivo_nao_existente",
       "description": "Executar a funcão `txt_importer` com uma extensão diferente de `.txt`, deve ser exibida uma mensagem: `Formato inválido`",
       "bonus": false
     }
