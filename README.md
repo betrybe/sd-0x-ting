@@ -12,7 +12,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 1. Clone o repositório
 
-- `git clone git@github.com:tryber/sd-0x-ting.git`.
+- `git clone https://github.com/tryber/sd-0x-ting.git`.
 - Entre na pasta do repositório que você acabou de clonar:
   - `sd-0x-ting`
 
@@ -22,7 +22,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 3. Instale as dependências
 
-- `python3 -m pip install -r requirements.txt`
+- `python3 -m pip install -r dev-requirements.txt`
 
 4. Crie uma branch a partir da branch `main`
 
@@ -121,7 +121,7 @@ $ python3 -m venv .venv
 
 $ source .venv/bin/activate
 
-$ python3 -m pip install -r requirements.txt
+$ python3 -m pip install -r dev-requirements.txt
 ```
 
 O arquivo `requirements.txt` contém todos as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`. Com as dependências já instaladas, para executar os testes basta usar o comando:
@@ -154,19 +154,15 @@ Acima de tudo,
 à análise do levantamento das variáveis envolvidas.
 ```
 
-Ao importar um arquivo, ele será adicionado a uma fila. Com isso, ele deve ganhar um identificador (`posicao`) que representa a posição dele na fila. Ou seja, se importarmos o arquivo `teste1.txt`, ele ficará na posição 1 da fila, assim consecutivamente nos demais arquivos.
-
 ##### As seguintes verificações serão feitas:
 
-- Caso o arquivo TXT não exista, deve ser exibida a mensagem: "`Arquivo {path_file} não encontrado`";
+- Executar o método `txt_importer` deve retornar uma estrutura contendo as linhas do arquivo;
 
-- Retorno das informações igual ao exemplo abaixo;
+- Executar a função `txt_importer` com um arquivo TXT que não exista, deve ser exibida a mensagem: "`Arquivo {path_file} não encontrado`";
 
-- Caso a extensão do arquivo seja diferente de `.txt`, deve ser exibida uma mensagem: "`Formato inválido`".
+- Executar a funcão `txt_importer` com uma extensão diferente de `.txt`, deve ser exibida uma mensagem: "`Formato inválido`".
 
 #### 2 - Deve haver uma função `process` dentro do módulo `file_process` capaz de ler o arquivo carregado na função anterior e efetuar o preprocessamento do conteúdo.
-
-> Observação: ao processar um novo arquivo na fila, o módulo deve ser capaz de retornar informações relacionadas ao arquivo, sendo elas: `nome do arquivo`, `quantidade de linhas` e a `posição do arquivo` dentro da estrutura. 
 
 **Exemplo de retorno**:
 
@@ -174,7 +170,7 @@ Ao importar um arquivo, ele será adicionado a uma fila. Com isso, ele deve ganh
 {
     "nome_do_arquivo": "arquivo_teste.txt", # Nome do arquivo recém adicionado
     "qtd_linhas": 3,                        # Quantidade de linhas existentes no arquivo
-    "posicao": 1                            # Posição do arquivo dentre os demais arquivos adicionados (iniciando em 1)
+    "linhas_do_arquivo": [...]              # linhas retornadas pela função do requisito 1
 }
 ```
 
@@ -184,19 +180,13 @@ Ao importar um arquivo, ele será adicionado a uma fila. Com isso, ele deve ganh
 
 - Não deve haver limites de linhas a serem analisadas;
 
-- Em caso de erros, a importação deve ser interrompida e a posição deve ficar disponível para uma nova inserção;
-
 - O exemplo de saída acima deve ser emitido após cada nova inserção válida, via `stdout`.
 
 #### 3 - Deve haver uma função `remove` dentro do módulo `file_process` capaz de remover o primeiro arquivo processado
 
-> Observação: ao remover um arquivo da fila, o módulo deve ser capaz de decrementar a quantidade de arquivos da estrutura.
-
 ##### As seguintes verificações serão feitas:
 
 - Por padrão deve-se ignorar a operação caso não hajam arquivos;
-
-- Em caso de erros, a remoção deve ser interrompida e os itens não devem ser alterados, mantendo a imutabilidade da estrutura;
 
 - Em caso de sucesso de remoção, deve ser emitido a mensagem: "`Arquivo {path_file} removido com sucesso`".
 
@@ -214,7 +204,7 @@ Ao importar um arquivo, ele será adicionado a uma fila. Com isso, ele deve ganh
 {
     "nome_do_arquivo": "arquivo_teste.txt",
     "qtd_linhas": 3,
-    "posicao": 1
+    "linhas_do_arquivo": [...]
 }
 ```
 
