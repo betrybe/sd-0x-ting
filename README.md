@@ -154,13 +154,19 @@ Acima de tudo,
 à análise do levantamento das variáveis envolvidas.
 ```
 
+- Caso o arquivo TXT não exista, deve ser exibida a mensagem: "Arquivo {path_file} não encontrado";
+
+- Caso a extensão do arquivo seja diferente de .txt, deve ser exibida uma mensagem: "Formato inválido".
+
+- A função deve retornar uma estrutura contendo as linhas do arquivo;
+
 ##### As seguintes verificações serão feitas:
 
 - Executar o método `txt_importer` deve retornar uma estrutura contendo as linhas do arquivo;
 
-- Executar a função `txt_importer` com um arquivo TXT que não exista, deve ser exibida a mensagem: "`Arquivo {path_file} não encontrado`";
+- Executar o método `txt_importer` com um arquivo TXT que não exista, deve ser exibida a mensagem: "`Arquivo {path_file} não encontrado`".
 
-- Executar a funcão `txt_importer` com uma extensão diferente de `.txt`, deve ser exibida uma mensagem: "`Formato inválido`".
+- Executar o método `txt_importer` com uma extensão diferente de `.txt`, deve ser exibida uma mensagem: "`Formato inválido`".
 
 #### 2 - Deve haver uma função `process` dentro do módulo `file_process` capaz de ler o arquivo carregado na função anterior e efetuar o preprocessamento do conteúdo.
 
@@ -174,25 +180,31 @@ Acima de tudo,
 }
 ```
 
-##### As seguintes verificações serão feitas:
-
 - Por padrão deve-se ignorar arquivos com o mesmo nome;
 
 - Não deve haver limites de linhas a serem analisadas;
 
 - O exemplo de saída acima deve ser emitido após cada nova inserção válida, via `stdout`.
 
-#### 3 - Deve haver uma função `remove` dentro do módulo `file_process` capaz de remover o primeiro arquivo processado
-
 ##### As seguintes verificações serão feitas:
 
-- Por padrão deve-se ignorar a operação caso não hajam arquivos;
+- Executar a função `process` com o mesmo nome a execucão deverá ser ignorada.
+
+- Executar a funcão `process` com sucesso deverá retornar mensagem via sdout.
+
+#### 3 - Deve haver uma função `remove` dentro do módulo `file_process` capaz de remover o primeiro arquivo processado
+
+- Por padrão deve-se ignorar a operação caso não hajam arquivos e emitir a mensagem `Não há elementos`;
 
 - Em caso de sucesso de remoção, deve ser emitido a mensagem: "`Arquivo {path_file} removido com sucesso`".
 
-#### 4 - Deve haver uma função `file_metadata` dentro do módulo `file_process` capaz de apresentar as informações superficiais dos arquivos processados.
-
 ##### As seguintes verificações serão feitas:
+
+- Executar a funcão `remove` com sucesso deverá retornar mensagem via sdout.
+
+- Executar a funcão `remove` um arquivo inexistente deverá retornar a mensagem `Não há elementos`.
+
+#### 4 - Deve haver uma função `file_metadata` dentro do módulo `file_process` capaz de apresentar as informações superficiais dos arquivos processados.
 
 - Baseado na posição informada, deve ser apresentado as informações relacionadas ao arquivo, parecido com o apresentado abaixo;
 
@@ -208,11 +220,15 @@ Acima de tudo,
 }
 ```
 
+##### As seguintes verificações serão feitas:
+
+- Executar a funcão `file_metadata` com sucesso deverá retornar mensagem via sdout.
+
+- Executar a funcão `file_metadata` com posição inválida deverá retornar a mensagem `Posição inválida`.
+
 ### Pacote `ting_word_searches`
 
 #### 5 - Deve haver uma função `exists_word` dentro do módulo `word_search`, que valide a existência da palavra em todos os arquivos processados. Para cada palavra encontrada, deve-se listar sua linha conforme apresentação abaixo.
-
-##### As seguintes verificações serão feitas:
 
 - A busca deve ser _case insensitive_ e deve retornar uma lista no formato:
 
@@ -233,9 +249,12 @@ Acima de tudo,
 
 - Caso a palavra não seja encontrada em nenhum arquivo, deve-se retornar uma lista vazia.
 
-#### 6 - Deve haver uma função `search_by_word` dentro do módulo `word_search`, que busque a palavra em todos os arquivos processados. Para cada palavra encontrada, deve-se listar sua linha, o conteúdo e o arquivo da ocorrência.
-
 ##### As seguintes verificações serão feitas:
+
+- 
+-
+
+#### 6 - Deve haver uma função `search_by_word` dentro do módulo `word_search`, que busque a palavra em todos os arquivos processados. Para cada palavra encontrada, deve-se listar sua linha, o conteúdo e o arquivo da ocorrência.
 
 - A busca deve ser _case insensitive_ e deve retornar uma lista no formato:
 
@@ -258,43 +277,16 @@ Acima de tudo,
 
 - Caso a palavra não seja encontrada em nenhum arquivo, deve-se retornar uma lista vazia.
 
+##### As seguintes verificações serão feitas:
+
 ---
 
 ## Requisitos bônus:
 
-#### 7 - Análise assintótica no gerenciamento de arquivos.
-
-##### Pacote `ting_file_management`
-
-##### Qual a complexidade do módulo para as operações:
-
-- Inserção de um novo arquivo
-
-- Remover um arquivo da estrutura 
-
-- Visualizar os metadados de um arquivo pela posição
-
-##### Pacote `ting_word_searches`
-
-##### Qual a complexidade do módulo para as operações:
-
-- Consultar uma palavra com a base de arquivos vazia
-
-- Consultar uma palavra com a base possuindo um arquivo que possui apenas a palavra pesquisada
-
-- Consultar uma palavra com a base possuindo N arquivos, onde a palavra procurada não se encontra presente.
-
----
-
-## Requisitos extras:
-
-⚠️  Requisitos não serão avaliados ⚠️
-
 ### Pacote `ting_menu`
 
-#### 8 - Crie um módulo `menu` que deve ser utilizado como um menu de opções, em que cada opção pede as informações necessárias para disparar uma ação. O texto exibido pelo menu deve ser exatamente:
+#### 7 - Crie um módulo `menu` que deve ser utilizado como um menu de opções, em que cada opção pede as informações necessárias para disparar uma ação. O texto exibido pelo menu deve ser exatamente:
 
-**Dica**: Utilize o `__main__`.
 
 ```md
 Selecione uma das opções a seguir:

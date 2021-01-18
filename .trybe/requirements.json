@@ -7,12 +7,42 @@
     },
     {
       "identifier": "test_validar_importar_com_extencao_invalida",
-      "description": "Executar a função `txt_importer` com um arquivo TXT que não exista, deve ser exibida a mensagem: `Arquivo {path_file} não encontrado`",
+      "description": "Executar o método `txt_importer` com um arquivo TXT que não exista, deve ser exibida a mensagem: `Arquivo {path_file} não encontrado`",
       "bonus": false
     },
     {
       "identifier": "test_validar_importar_com_arquivo_nao_existente",
-      "description": "Executar a funcão `txt_importer` com uma extensão diferente de `.txt`, deve ser exibida uma mensagem: `Formato inválido`",
+      "description": "Executar o método `txt_importer` com uma extensão diferente de `.txt`, deve ser exibida uma mensagem: `Formato inválido`",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_funcao_process_ignorando_mesmo_nome",
+      "description": "Executar a função `process` com o mesmo nome a execucão deverá ser ignorada",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_funcao_process_com_sucesso",
+      "description": "Executar a funcão `process` com sucesso deverá retornar mensagem via sdout",
+      "bonus": false
+    },
+    {
+      "identifier": "test_remover_arquivo_com_sucesso",
+      "description": "Executar a funcão `remove` com sucesso deverá retornar mensagem via sdout",
+      "bonus": false
+    },
+    {
+      "identifier": "test_remover_arquivo_inexistente",
+      "description": "Executar a funcão `remove` um arquivo inexistente deverá retornar a mensagem `Não há elementos`",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_funcao_file_metadata_com_sucesso",
+      "description": "Executar a funcão `file_metadata` com sucesso deverá retornar mensagem via sdout",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_funcao_file_metadata_com_posicao_invalida",
+      "description": "Executar a funcão `file_metadata` com posição inválida deverá retornar a mensagem `Posição inválida`",
       "bonus": false
     }
   ]
