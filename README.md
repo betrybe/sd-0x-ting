@@ -251,8 +251,9 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- 
--
+- Executar a funcão `exists_word` com sucesso deverá retornar a mensagem.
+
+- Executar a funcão `exists_word` com palavra inexistente deverá retornar uma lista vazia.
 
 #### 6 - Deve haver uma função `search_by_word` dentro do módulo `word_search`, que busque a palavra em todos os arquivos processados. Para cada palavra encontrada, deve-se listar sua linha, o conteúdo e o arquivo da ocorrência.
 
@@ -278,6 +279,10 @@ Acima de tudo,
 - Caso a palavra não seja encontrada em nenhum arquivo, deve-se retornar uma lista vazia.
 
 ##### As seguintes verificações serão feitas:
+
+- Executar a funcão `search_by_word` com sucesso deverá retornar a mensagem.
+
+- Executar a funcão `search_by_word` com palavra inexistente deverá retornar uma lista vazia.
 
 ---
 

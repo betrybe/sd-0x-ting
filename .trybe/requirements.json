@@ -44,6 +44,26 @@
       "identifier": "test_validar_funcao_file_metadata_com_posicao_invalida",
       "description": "Executar a funcão `file_metadata` com posição inválida deverá retornar a mensagem `Posição inválida`",
       "bonus": false
-    }
+    },
+    {
+      "identifier": "test_validar_funcao_exists_word_com_sucesso",
+      "description": "Executar a funcão `exists_word` com sucesso deverá retornar a mensagem",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_funcao_exists_word_sem_palavra_existente",
+      "description": "Executar a funcão `exists_word` com palavra inexistente deverá retornar uma lista vazia",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_search_by_word_com_sucesso",
+      "description": "Executar a funcão `search_by_word` com sucesso deverá retornar a mensagem",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_search_by_word_com_palavra_inexistente",
+      "description": "Executar a funcão `search_by_word` com palavra inexistente deverá retornar uma lista vazia",
+      "bonus": false
+    }    
   ]
 }
