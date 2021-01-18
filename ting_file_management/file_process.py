@@ -1,8 +1,8 @@
-def process(path_file):
+def process(path_file, instance):
     raise NotImplementedError
 
 
-def remove():
+def remove(instance):
     raise NotImplementedError
 
 
