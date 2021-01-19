@@ -64,6 +64,36 @@
       "identifier": "test_validar_search_by_word_com_palavra_inexistente",
       "description": "Executar a funcão `search_by_word` com palavra inexistente deverá retornar uma lista vazia",
       "bonus": false
-    }    
+    },
+    {
+      "identifier": "test_validar_saida_do_console_menu",
+      "description": "Executar o menu deverá listar as opções",
+      "bonus": true
+    },
+    {
+      "identifier": "test_executar_opcao_sair_menu",
+      "description": "Executar a opção sair deverá sair do menu",
+      "bonus": true
+    },
+    {
+      "identifier": "test_executar_opcao_invalida_do_menu",
+      "description": "Executar a opção inválida deverá retornar o erro `Opção inválida`",
+      "bonus": true
+    },
+    {
+      "identifier": "test_executar_opcao_importar_txt_menu",
+      "description": "Executar a opção 1 deverá retornar printar o resultado na tela",
+      "bonus": true
+    },
+    {
+      "identifier": "test_executar_opcao_processar_txt_menu",
+      "description": "Executar a opção 2 deverá retornar printar o resultado na tela",
+      "bonus": true
+    },
+    {
+      "identifier": "test_executar_opcao_buscar_txt_menu",
+      "description": "Executar a opção 3 deverá retornar printar o resultado na tela",
+      "bonus": true
+    }      
   ]
 }

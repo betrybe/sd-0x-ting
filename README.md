@@ -290,129 +290,56 @@ Acima de tudo,
 
 ### Pacote `ting_menu`
 
-#### 7 - Crie um módulo `menu` que deve ser utilizado como um menu de opções, em que cada opção pede as informações necessárias para disparar uma ação. O texto exibido pelo menu deve ser exatamente:
-
-
-```md
-Selecione uma das opções a seguir:
-
-1 - Módulo gerenciamento de arquivos;
-2 - Módulo consulta de palavras;
-3 - Sair.
-```
-
-##### As seguintes verificações serão feitas:
-
-- A mensagem de menu deve ser exibida corretamente;
-
-- Caso a opção `1` seja selecionada, deve-se exibir o submenu do módulo;
-
-- Caso a opção `2` seja selecionada, deve-se exibir o submenu do módulo;
-
-- Caso a opção `3` seja selecionada, deve-se encerrar a execução do script (dica: verifique o `exit code`);
-
-#### 9 - Ao selecionar a opção 1 do menu de opções e inserir as informações necessárias, a ação adequada deve ser disparada.
+#### 8 - Ao selecionar a opção do menu de opções e inserir as informações necessárias, a ação adequada deve ser disparada.
 
 ```md
 Selecione uma das opções a seguir:
 
 1 - Iniciar importação a partir de um arquivo TXT;
-2 - Visualizar detalhes de arquivo anexado por posição;
-3 - Remover arquivo da base;
-4 - Voltar ao menu anterior.
-5 - Sair.
+2 - Processar um arquivo;
+3 - Verificar se palavra existe na base;
+4 - Sair.
 ```
-
-##### As seguintes verificações serão feitas:
 
 - A mensagem de menu deve ser exibida corretamente;
 
 - Caso a opção `1` seja selecionada, deve-se exibir a mensagem "Digite o path do arquivo TXT a ser importado:";
 
-- Caso a opção `2` seja selecionada, deve-se exibir a mensagem "Digite a posição do arquivo a ser detalhado:";
+- Caso a opção `2` seja selecionada, deve-se exibir a mensagem "Digite o arquivo a ser processado:";
 
-- Caso a opção `3` seja selecionada, deve-se exibir a mensagem "Digite Y para confirmar a remoção ou N para cancelar:";
+- Caso a opção `3` seja selecionada, deve-se exibir a mensagem "Digite a palavra a ser consultada:";
 
-- Caso a opção `4` seja selecionada, deve-se ser apresentado o menu anterior;
+- Caso a opção `4` seja selecionada, deve-se encerrar a execução do script (dica: verifique o exit code);
 
 - Caso a opção não exista, exiba a mensagem de erro "Opção inválida" na `stderr`.
 
-
-#### 10 - Ao selecionar uma opção do menu de opções e inserir as informações necessárias, a ação adequada deve ser disparada e seu resultado deve ser exibido.
-
 ##### As seguintes verificações serão feitas:
+
+- Executar o menu deverá listar as opções.
+
+- Executar a opção sair deverá sair do menu.
+
+- Executar a opção inválida deverá retornar o erro `Opção inválida`.
+
+#### 9 - Ao selecionar uma opção do menu de opções e inserir as informações necessárias, a ação adequada deve ser disparada e seu resultado deve ser exibido.
 
 - Caso a opção `1` seja selecionada, a importação deve ser feita utilizando função `txt_importer`;
 
-- Caso a opção `2` seja selecionada, a apresentação deve ser feita utilizando função `file_metadata`;
+- Caso a opção `2` seja selecionada, a apresentação deve ser feita utilizando função `process`;
 
-- Caso a opção `3` seja selecionada, a remoção deve ser feita utilizando função `remove`;
-
-- Caso a opção `5` seja selecionada, deve-se encerrar a execução do script (dica: verifique o `exit code`);
-
-- Após finalizar a execução de uma ação(exceto a 5), a sessão do script não deve ser encerrada.
-
-#### 11 - Ao selecionar a opção 2 do menu de opções e inserir as informações necessárias, a ação adequada deve ser disparada.
-
-```md
-Selecione uma das opções a seguir:
-
-1 - Verificar se palavra existe na base;
-2 - Buscar palavra em base;
-3 - Voltar ao menu anterior.
-4 - Sair.
-```
-
-##### As seguintes verificações serão feitas:
-
-- A mensagem de menu deve ser exibida corretamente;
-
-- Caso a opção `1` seja selecionada, deve-se exibir a mensagem "Digite a palavra a ser consultada:";
-
-- Caso a opção `2` seja selecionada, deve-se exibir a mensagem "Digite a palavra a ser consultada:";
-
-- Caso a opção `3` seja selecionada, deve-se ser apresentado o menu anterior;
+- Caso a opção `3` seja selecionada, a apresentação deve ser feita utilizando função `search_by_word`;
 
 - Caso a opção `4` seja selecionada, deve-se encerrar a execução do script (dica: verifique o `exit code`);
 
 - Após finalizar a execução de uma ação(exceto a 4), a sessão do script não deve ser encerrada.
 
-
-#### 12 - Ao selecionar uma opção do menu de opções e inserir as informações necessárias, a ação adequada deve ser disparada e seu resultado deve ser exibido.
-
 ##### As seguintes verificações serão feitas:
 
-- A mensagem de menu deve ser exibida corretamente;
+- Executar a opção 1 deverá retornar printar o resultado na tela.
 
-- Caso a opção `1` seja selecionada, a consulta deve ser feita utilizando função `exists_word` e seu resultado deve ser impresso em tela;
+- Executar a opção 2 deverá retornar printar o resultado na tela.
 
-- Caso a opção `2` seja selecionada, a consulta deve ser feita utilizando função `search_by_word` e seu resultado deve ser impresso em tela;
-
-- Caso a opção não exista, exiba a mensagem de erro "Opção inválida" na `stderr`.
-
-#### 13 - A cobertura de testes unitários do pacote deve ser de no mínimo 90%.
-
-##### Pacote `ting_file_management`
-
-##### As seguintes verificações serão feitas:
-
-- Todos os testes que envolvem mensagens na saída padrão ou de erro, devem ter sua saída redirecionada para _Fakes_ com `StringIO`;
-
-- Todos os testes que envolvem manipulação de arquivos criam _Fakes_ com `StringIO`;
-
-- A cobertura de testes é de no mínimo 90%.
-
-#### Pacote `ting_word_searches`
-
-##### As seguintes verificações serão feitas:
-
-- Todos os testes que envolvem mensagens na saída padrão ou de erro, devem ter sua saída redirecionada para _Fakes_ com `StringIO`;
-
-- Todos os testes que envolvem manipulação de arquivos criam _Fakes_ com `StringIO`;
-
-- A cobertura de testes é de no mínimo 90%.
-
----
+- Executar a opção 3 deverá retornar printar o resultado na tela.
 
 ### DURANTE O DESENVOLVIMENTO
 
