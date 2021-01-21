@@ -216,7 +216,7 @@ Acima de tudo,
 
 - Executar a função `process` com o mesmo nome a execução deverá ser ignorada;
 
-- Executar a função `process` com sucesso deverá retornar mensagem via `sdout`.
+- Executar a função `process` com sucesso deverá retornar mensagem via `stdout`.
 
 #### 4 - Deve haver uma função `remove` dentro do módulo `file_process` capaz de remover o primeiro arquivo processado
 
@@ -228,7 +228,7 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a função `remove` com sucesso deverá retornar mensagem via `sdout`.
+- Executar a função `remove` com sucesso deverá retornar mensagem via `stdout`.
 
 - Executar a função `remove` um arquivo inexistente deverá retornar a mensagem `Não há elementos`.
 
@@ -252,7 +252,7 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a função `file_metadata` com sucesso deverá retornar mensagem via `sdout`.
+- Executar a função `file_metadata` com sucesso deverá retornar mensagem via `stdout`.
 
 - Executar a função `file_metadata` com posição inválida deverá retornar a mensagem `Posição inválida`.
 

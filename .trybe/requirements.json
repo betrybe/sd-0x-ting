@@ -42,12 +42,12 @@
     },
     {
       "identifier": "test_validar_funcao_process_com_sucesso",
-      "description": "Executar a funcão `process` com sucesso deverá retornar mensagem via sdout",
+      "description": "Executar a funcão `process` com sucesso deverá retornar mensagem via stdout",
       "bonus": false
     },
     {
       "identifier": "test_remover_arquivo_com_sucesso",
-      "description": "Executar a funcão `remove` com sucesso deverá retornar mensagem via sdout",
+      "description": "Executar a funcão `remove` com sucesso deverá retornar mensagem via stdout",
       "bonus": false
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "identifier": "test_validar_funcao_file_metadata_com_sucesso",
-      "description": "Executar a funcão `file_metadata` com sucesso deverá retornar mensagem via sdout",
+      "description": "Executar a funcão `file_metadata` com sucesso deverá retornar mensagem via stdout",
       "bonus": false
     },
     {
