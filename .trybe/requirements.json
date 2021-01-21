@@ -21,7 +21,7 @@
       "bonus": false
     },  
     {
-      "identifier": "test_validar_importar_importar_noticias_com_sucesso",
+      "identifier": "test_validar_importar_noticias_com_sucesso",
       "description": "Executar o método `txt_importer` deve retornar uma estrutura contendo as linhas do arquivo",
       "bonus": false
     },
