@@ -1,9 +1,9 @@
 from ting_word_searches.word_search import search_by_word, exists_word
-from ting_file_management.file_process import process, remove, file_metadata
-from src.deque import Deque
+from ting_file_management.file_process import process
+from ting_file_management.queue import Queue
 
 
-project = Deque()
+project = Queue()
 text_exists_word = [
     {
         "palavra": "Pedro",

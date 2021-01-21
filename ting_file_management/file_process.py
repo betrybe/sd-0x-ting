@@ -1,10 +1,10 @@
 def process(path_file, instance):
-    raise NotImplementedError
+    """Aqui irá sua implementação"""
 
 
 def remove(instance):
-    raise NotImplementedError
+    """Aqui irá sua implementação"""
 
 
 def file_metadata(instance, position):
-    raise NotImplementedError
+    """Aqui irá sua implementação"""
