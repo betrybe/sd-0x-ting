@@ -188,9 +188,9 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a função `process` com o mesmo nome a execucão deverá ser ignorada.
+- Executar a função `process` com o mesmo nome a execução deverá ser ignorada.
 
-- Executar a funcão `process` com sucesso deverá retornar mensagem via sdout.
+- Executar a função `process` com sucesso deverá retornar mensagem via sdout.
 
 #### 3 - Deve haver uma função `remove` dentro do módulo `file_process` capaz de remover o primeiro arquivo processado
 
@@ -200,9 +200,9 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a funcão `remove` com sucesso deverá retornar mensagem via sdout.
+- Executar a função `remove` com sucesso deverá retornar mensagem via sdout.
 
-- Executar a funcão `remove` um arquivo inexistente deverá retornar a mensagem `Não há elementos`.
+- Executar a função `remove` um arquivo inexistente deverá retornar a mensagem `Não há elementos`.
 
 #### 4 - Deve haver uma função `file_metadata` dentro do módulo `file_process` capaz de apresentar as informações superficiais dos arquivos processados.
 
@@ -222,9 +222,9 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a funcão `file_metadata` com sucesso deverá retornar mensagem via sdout.
+- Executar a função `file_metadata` com sucesso deverá retornar mensagem via sdout.
 
-- Executar a funcão `file_metadata` com posição inválida deverá retornar a mensagem `Posição inválida`.
+- Executar a função `file_metadata` com posição inválida deverá retornar a mensagem `Posição inválida`.
 
 ### Pacote `ting_word_searches`
 
@@ -251,9 +251,9 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a funcão `exists_word` com sucesso deverá retornar a mensagem.
+- Executar a função `exists_word` com sucesso deverá retornar a mensagem.
 
-- Executar a funcão `exists_word` com palavra inexistente deverá retornar uma lista vazia.
+- Executar a função `exists_word` com palavra inexistente deverá retornar uma lista vazia.
 
 #### 6 - Deve haver uma função `search_by_word` dentro do módulo `word_search`, que busque a palavra em todos os arquivos processados. Para cada palavra encontrada, deve-se listar sua linha, o conteúdo e o arquivo da ocorrência.
 
@@ -280,9 +280,9 @@ Acima de tudo,
 
 ##### As seguintes verificações serão feitas:
 
-- Executar a funcão `search_by_word` com sucesso deverá retornar a mensagem.
+- Executar a função `search_by_word` com sucesso deverá retornar a mensagem.
 
-- Executar a funcão `search_by_word` com palavra inexistente deverá retornar uma lista vazia.
+- Executar a função `search_by_word` com palavra inexistente deverá retornar uma lista vazia.
 
 ---
 
