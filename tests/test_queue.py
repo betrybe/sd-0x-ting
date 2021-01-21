@@ -9,7 +9,7 @@ def test_enqueue_deve_adicionar_um_valor_a_fila():
     assert len(queue) == 1
 
 
-def test_dequeue_deve_adicionar_um_valor_a_fila():
+def test_dequeue_deve_remover_um_valor_a_fila():
     queue = Queue()
     queue.enqueue(42)
     queue.enqueue(43)

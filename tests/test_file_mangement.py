@@ -1,12 +1,11 @@
 from ting_file_management.file_management import txt_importer
-import pytest
-import sys
 
 
 def test_validar_importar_noticias_com_sucesso(capsys):
     text_file = [
         "Acima de tudo,",
-        "é fundamental ressaltar que a adoção de políticas descentralizadoras nos obriga",
+        "é fundamental ressaltar que a adoção de "
+        "políticas descentralizadoras nos obriga",
         "à análise do levantamento das variáveis envolvidas.",
     ]
     assert txt_importer("statics/arquivo_teste.txt") == text_file

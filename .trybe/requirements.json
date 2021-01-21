@@ -1,6 +1,26 @@
 {
   "requirements": [
     {
+      "identifier": "test_enqueue_deve_adicionar_um_valor_a_fila",
+      "description": "O método `enqueue` deve adicionar um valor a fila, modificando seu tamanho",
+      "bonus": false
+    },
+    {
+      "identifier": "test_dequeue_deve_remover_um_valor_a_fila",
+      "description": "O método `dequeue` deve remover o elemento a mais tempo na fila, modificando seu tamanho",
+      "bonus": false
+    },
+    {
+      "identifier": "test_search_deve_buscar_um_valor_a_partir_de_um_indice",
+      "description": "O método `search` deve buscar um valor na lista à partir de um índice",
+      "bonus": false
+    },
+    {
+      "identifier": "test_search_com_indice_invalido",
+      "description": "O método `search` deve lançar uma exceção quando o índice for inválido",
+      "bonus": false
+    },  
+    {
       "identifier": "test_validar_importar_importar_noticias_com_sucesso",
       "description": "Executar o método `txt_importer` deve retornar uma estrutura contendo as linhas do arquivo",
       "bonus": false
@@ -64,6 +84,6 @@
       "identifier": "test_validar_search_by_word_com_palavra_inexistente",
       "description": "Executar a funcão `search_by_word` com palavra inexistente deverá retornar uma lista vazia",
       "bonus": false
-    }    
+    }  
   ]
 }

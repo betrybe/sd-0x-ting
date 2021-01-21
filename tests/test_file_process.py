@@ -14,7 +14,8 @@ def test_validar_funcao_process_com_sucesso(capsys):
 def test_validar_funcao_process_ignorando_mesmo_nome(capsys):
     project = Queue()
     process("statics/arquivo_teste.txt", project)
-    len(project) == 1
+    process("statics/arquivo_teste.txt", project)
+    assert len(project) == 1
 
 
 def test_remover_arquivo_com_sucesso(capsys):
