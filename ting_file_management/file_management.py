@@ -1,2 +1,2 @@
 def txt_importer(path_file):
-    raise NotImplementedError
+    """Aqui irá sua implementação"""
